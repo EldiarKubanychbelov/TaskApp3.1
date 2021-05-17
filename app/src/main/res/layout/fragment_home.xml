@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:listitem="@layout/list_task" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -13,8 +22,6 @@
         android:layout_margin="30dp"
         android:src="@drawable/ic_add"
         android:tint="@color/black"
-        android:backgroundTint="@color/black"
-        android:foreground="@color/black"
         android:background="@color/purple_700"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
