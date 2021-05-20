@@ -33,8 +33,6 @@ public class TaskFragment extends Fragment {
             public void onClick(View v) {
                 save();
             }
-
-
         });
     }
 

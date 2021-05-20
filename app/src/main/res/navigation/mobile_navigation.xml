@@ -31,5 +31,10 @@
         android:name="com.example.taskapp31.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="com.example.taskapp31.ui.onboard.BoardFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_board" />
 
 </navigation>

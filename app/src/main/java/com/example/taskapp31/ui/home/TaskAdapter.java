@@ -17,6 +17,7 @@ import com.example.taskapp31.MainActivity;
 import com.example.taskapp31.R;
 import com.example.taskapp31.models.Task;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
@@ -38,11 +39,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         holder.bind(list.get(position));
 
 
-      if (position % 2 == 1 ){
-          holder.itemView.setBackgroundColor(Color.parseColor("black"));
-      }
 
+        if (position%2 == 0) {
+            holder.itemView.setBackgroundResource(R.color.white);
+        } else {
+            holder.itemView.setBackgroundResource(R.color.black);
+        }
 
+        
        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
            @Override
            public boolean onLongClick(View v) {
@@ -84,11 +88,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView textTitle;
+        private TextView textTitle,txtData;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textTitle = itemView.findViewById(R.id.text_Title);
+            txtData = itemView.findViewById(R.id.txt_data);
 
 
 
